@@ -3,25 +3,32 @@
 [![Python Version](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A comprehensive deep-dive into Computed Tomography (CT) imaging, covering everything from the mathematical foundations of the Radon Transform to modern reconstruction techniques.
+A comprehensive deep-dive into Computed Tomography (CT) imaging, covering the full pipeline from raw X-ray projections (Radon Space) to diagnostic image reconstruction. This project demonstrates the mathematical foundations required for advanced Medical AI applications.
 
 ## Project Overview
 This repository serves as a pedagogical and technical foundation for understanding how raw X-ray projections are transformed into diagnostic 3D volumes.
 
 ## Repository Structure
-* `src/`: Modular Python implementation of reconstruction algorithms.
+* `src/`: Python modules for CT operations.
 * `notebooks/`: Interactive tutorials and visualizations.
-* `data/`: Scripts for phantom generation and data handling.
-* `tests/`: Unit tests for signal processing consistency.
+* `tests/`: Automated unit tests ensuring mathematical and structural integrity.
+* `data/processed/`: Storage for generated phantoms and reconstruction results.
 
 ## Mathematical Core Concepts
 *(Work in Progress)*
-- [ ] Radon Transformation (Forward Projection)
-- [ ] Central Slice Theorem
-- [ ] Filtered Back Projection (FBP)
-- [ ] Iterative Reconstruction Basics
+- [x] Radon Transformation: Mapping 2D objects to Sinograms (Forward Path).
+- [x] Central Slice Theorem: Connecting 1D Fourier slices to 2D image space.
+- [x] Filtered Back Projection (FBP): Analytical inversion using Ramp (Ram-Lak) filtering.
+- [x] Artifact Modeling: Quantitative analysis of 1/r blurring and Poisson-like noise.
+  
+## Visual Showcase
+| Visualisierung | Beschreibung | Plot |
+| :-- | :-- | :--- |
+| **Simple vs filtered backprojection** | **Left** simple backprojection (blurred) <br>**Right:** filtered reconstruction | *![simpleVsFiltered](data/processed/simpleVsFilteredBackprojection.png)* |
+| **Artifacts** | **Left** ideal reconstruction <br>**Mid:** Sparse-view <br>**Right:** Low-Dose | *![artifacts](data/processed/artifacts.png)* |
 
-## Getting Started
+## Installation & Usage
+
 
 ### Prerequisites
 This project uses **uv** for dependency management. Install it via:
@@ -29,18 +36,27 @@ This project uses **uv** for dependency management. Install it via:
 curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
 ```
 
-## Installation
+## Setup
 ```bash
-# Clone the repository
 git clone <your-repo-url>
 cd ct-foundations
-
-# Install dependencies and create virtual environment
 uv sync
 ```
 
+## Running pipeline
+Simulate a Low-Dose CT with noise and specific filtering:
+```bash
+uv run src/main.py --angles 120 --noise 0.05 --filter shepp-logan
+```
+
+## Testing
+```bash
+uv run pytest
+```
+
+
 ## Roadmap
-- [ ] Phase 1: Single-slice reconstruction from Shepp-Logan phantom.
-- [ ] Phase 2: Implementation of different convolution filters (RAM-LAK, Shepp-Logan).
-- [ ] Phase 3: Handling 3D helical scan geometries
+- [x] Phase 1: Core physics and FBP.
+- [x] Phase 2: CLI driven artifact and noise simulation
+- [ ] Phase 3: Iterative Reconstruction (ART/SART) as a precursor to Deep Learning methods
 
