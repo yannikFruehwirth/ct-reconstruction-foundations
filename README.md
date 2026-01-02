@@ -38,8 +38,8 @@ curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | 
 
 ## Setup
 ```bash
-git clone <your-repo-url>
-cd ct-foundations
+git clone https://github.com/yannikFruehwirth/ct-reconstruction-foundations
+cd ct-reconstruction-foundations
 uv sync
 ```
 
