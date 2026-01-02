@@ -58,5 +58,3 @@ uv run pytest
 ## Roadmap
 - [x] Phase 1: Core physics and FBP.
 - [x] Phase 2: CLI driven artifact and noise simulation
-- [ ] Phase 3: Iterative Reconstruction (ART/SART) as a precursor to Deep Learning methods
-
