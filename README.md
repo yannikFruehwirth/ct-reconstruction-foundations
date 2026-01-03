@@ -22,7 +22,7 @@ This repository serves as a pedagogical and technical foundation for understandi
 - [x] Artifact Modeling: Quantitative analysis of 1/r blurring and Poisson-like noise.
   
 ## Visual Showcase
-| Visualisierung | Beschreibung | Plot |
+| Visualization | Description | Plot |
 | :-- | :-- | :--- |
 | **Simple vs filtered backprojection** | **Left** simple backprojection (blurred) <br>**Right:** filtered reconstruction | *![simpleVsFiltered](data/processed/simpleVsFilteredBackprojection.png)* |
 | **Artifacts** | **Left** ideal reconstruction <br>**Mid:** Sparse-view <br>**Right:** Low-Dose | *![artifacts](data/processed/artifacts.png)* |
