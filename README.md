@@ -5,6 +5,9 @@
 
 A comprehensive deep-dive into Computed Tomography (CT) imaging, covering the full pipeline from raw X-ray projections (Radon Space) to diagnostic image reconstruction. This project demonstrates the mathematical foundations required for advanced Medical AI applications.
 
+## About me
+I am a young AI student and would like to apply the knowledge I have learned in order to continue learning. This project is part of my “CT learning journey.” Click here for the pancreas segmentation ([link](https://github.com/yannikFruehwirth/ct-segmentation-monai)). If you notice any mistakes or want to make suggestions, please feel free to reach out to me (Yannik.fruehwirth@web.de).
+
 ## Project Overview
 This repository serves as a pedagogical and technical foundation for understanding how raw X-ray projections are transformed into diagnostic 3D volumes.
 
